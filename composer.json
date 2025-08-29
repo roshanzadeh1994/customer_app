@@ -1,0 +1,11 @@
+{
+  "name": "amir/customer-app", 
+  "description": "Mini Kunden-CRUD App (PHP, MySQL)",
+  "type": "project",
+  "autoload": {
+    "psr-4": {
+      "App\\": "app/"
+    }
+  },
+  "require": {}
+}

@@ -1,0 +1,11 @@
+RewriteEngine On
+RewriteBase /customer_app/public/
+
+# Anfrage nur umleiten, wenn keine echte Datei vorhanden ist
+RewriteCond %{REQUEST_FILENAME} !-f
+
+# und kein echtes Verzeichnis
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Alle anderen Requests an index.php weiterleiten (Front Controller)
+RewriteRule ^ index.php [QSA,L]
