@@ -54,9 +54,9 @@ composer install
 - Im Browser öffnen:  
   ```bash
    http://localhost/customer_app/public/login
- ```
+    ```
 
- ```
+ 
 ## Features (Kurzfassung)
 - CSRF-Schutz bei allen Formularen  
 - Passwort-Hashing mit `password_hash` und Prüfung mit `password_verify`  
