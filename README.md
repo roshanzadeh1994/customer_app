@@ -26,6 +26,10 @@ Ziel war die Erstellung einer Mini-Webapplikation (**PHP + MySQL**) mit folgende
    Installiere zuerst XAMPP auf deinem Rechner.
 
 2. **In das `htdocs`-Verzeichnis wechseln**  
+```bash
+cd C:\xampp\htdocs
+git clone https://github.com/roshanzadeh1994/customer_app.git
+ ```
    Öffne die terminal und führe folgenden Befehl aus:
    ```bash
    cd C:\xampp\htdocs
