@@ -45,7 +45,8 @@ composer install
 ### 4. Datenbank einrichten
 - Öffnen Sie phpMyAdmin unter 
    ```bash
-  http://localhost/phpmyadmin ```
+  http://localhost/phpmyadmin
+    ```
 - Erstellen Sie eine neue Datenbank mit dem Namen **`customer_app`** 
 - Wählen Sie diese Datenbank aus, gehen Sie zum Tab SQL, öffnen Sie die Datei database/schema.sql, kopieren Sie den Inhalt und fügen Sie ihn dort ein.
 - Klicken Sie anschließend auf OK / Ausführen, um die Tabellen zu erstellen
