@@ -16,7 +16,7 @@
       <input name="phone" value="<?= htmlspecialchars($customer['phone'] ?? '') ?>">
     </label>
     <div class="right">
-      <a class="btn ghost" href="/customer_app/public/customers">Abbrechen</a> <!-- zurück ohne Änderungen -->
+      <a class="btn ghost" href="<?= BASE_PATH ?>/customers">Abbrechen</a> <!-- zurück ohne Änderungen -->
       <button type="submit" class="btn">Aktualisieren</button> <!-- zurück ohne Änderungen -->
     </div>
   </form>

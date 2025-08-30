@@ -16,7 +16,7 @@
       <input name="phone">
     </label>
     <div class="right">
-      <a class="btn ghost" href="/customer_app/public/customers">Abbrechen</a>
+      <a class="btn ghost" href="<?= BASE_PATH ?>/customers">Abbrechen</a>
       <button type="submit" class="btn">Speichern</button>
     </div>
   </form>

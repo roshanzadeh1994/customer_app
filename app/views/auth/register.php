@@ -13,7 +13,7 @@
     <div class="form-actions">
         
         <!-- Link zurück zum Login -->
-      <a class="btn ghost" href="/customer_app/public/login">Zum Login</a> 
+      <a class="btn ghost" href="<?= BASE_PATH ?>/login">Zum Login</a> 
 
       <!-- Registrierung absenden -->
       <button type="submit" class="btn">Konto erstellen</button>  

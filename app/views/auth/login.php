@@ -17,6 +17,6 @@
 
   <!-- Link zur Registrierung für neue User -->
   <p class="auth-alt">
-    Neu hier? <a href="/customer_app/public/register">Konto erstellen</a>
+    Neu hier? <a href="<?= BASE_PATH ?>/register">Konto erstellen</a>
   </p>
 </section>

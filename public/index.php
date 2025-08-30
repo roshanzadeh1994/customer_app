@@ -6,7 +6,11 @@ use App\Controllers\CustomerController;
 use App\Core\Auth;
 
 $uri  = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH); // aktuelle URL (Pfad)
-$base = '/customer_app/public';                           // Basis-Pfad der App
+//$base = '/customer_app/public';                           // Basis-Pfad der App
+
+$base = rtrim(str_replace('\\','/', dirname($_SERVER['SCRIPT_NAME'])), '/');
+// به‌صورت گلوبال برای ویوها/کنترلرها هم فراهم کنیم:
+if (!defined('BASE_PATH')) define('BASE_PATH', $base);
 
 
 // Kleiner Router-Helfer: vergleicht aktuelle URL mit Zielpfad

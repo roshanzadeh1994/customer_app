@@ -7,7 +7,7 @@
     </div>
     <div class="right">
       <input id="table-search" type="search" placeholder="Suchen (Name, Nr, Adresse, Telefon) …" aria-label="Suchen"> <!-- Suchfeld -->
-      <a class="btn" href="/customer_app/public/customers/create">+ Neuer Kunde</a>  <!-- Neuer Kunde anlegen -->
+      <a class="btn" href="<?= BASE_PATH ?>/customers/create">+ Neuer Kunde</a>  <!-- Neuer Kunde anlegen -->
     </div>
   </div>
 
@@ -15,7 +15,7 @@
     <div class="empty">
       <h3>Noch keine Kunden</h3>  <!-- leere Liste -->
       <p>Lege deinen ersten Kundendatensatz an.</p>
-      <a class="btn" href="/customer_app/public/customers/create">Jetzt anlegen</a>
+      <a class="btn" href="<?= BASE_PATH ?>/customers/create">Jetzt anlegen</a>
     </div>
   <?php else: ?>
     <div class="table-wrap">
@@ -37,8 +37,8 @@
               <td><?= htmlspecialchars($c['address'] ?? '') ?></td>
               <td><?= htmlspecialchars($c['phone'] ?? '') ?></td>
               <td class="actions nowrap">
-                <a class="link" href="/customer_app/public/customers/<?= (int)$c['id'] ?>/edit">Bearbeiten</a> <!-- Kunde bearbeiten -->
-                <form action="/customer_app/public/customers/<?= (int)$c['id'] ?>/delete" method="post" onsubmit="return confirm('Sicher löschen?')" style="display:inline">
+                <a class="link" href="<?= BASE_PATH ?>customers/<?= (int)$c['id'] ?>/edit">Bearbeiten</a> <!-- Kunde bearbeiten -->
+                <form action="<?= BASE_PATH ?>/customers/<?= (int)$c['id'] ?>/delete" method="post" onsubmit="return confirm('Sicher löschen?')" style="display:inline">
                   <?= Csrf::input() ?>
                   <button type="submit" class="linklike">Löschen</button> <!-- Kunde löschen -->
                 </form>

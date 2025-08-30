@@ -38,7 +38,8 @@ class CustomerController extends Controller {
 
                     // Neuen Kunden speichern
                     Customer::create(Auth::id(), $number, $name, $address ?: null, $phone ?: null);
-                    $this->redirect('/customer_app/public/customers');
+                    $this->redirect('/customers');
+
                 }
             }
         }
@@ -72,7 +73,8 @@ class CustomerController extends Controller {
 
                     // Kunden aktualisieren
                     Customer::update($id, Auth::id(), $number, $name, $address ?: null, $phone ?: null);
-                    $this->redirect('/customer_app/public/customers');
+                    $this->redirect('/customers');
+
                 }
             }
         }
@@ -87,6 +89,7 @@ class CustomerController extends Controller {
         if ($_SERVER['REQUEST_METHOD'] === 'POST' && Csrf::verify($_POST['csrf'] ?? '')) {
             Customer::delete($id, Auth::id());
         }
-        $this->redirect('/customer_app/public/customers');
+        $this->redirect('/customers');
+
     }
 }

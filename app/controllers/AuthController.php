@@ -28,7 +28,8 @@ class AuthController extends Controller {
                     $user = User::findByEmail($email);
                     if ($user && password_verify($pass, $user['password_hash'])) {
                         Auth::login((int)$user['id']);
-                        $this->redirect('/customer_app/public/customers');
+                        $this->redirect('/customers');
+
                     } else {
                         $error = 'Login fehlgeschlagen.';
                     }
@@ -55,7 +56,8 @@ class AuthController extends Controller {
                 } else {
                     try {
                         User::create($email, $pass);
-                        $this->redirect('/customer_app/public/login');
+                        $this->redirect('/customers');
+
                     } catch (\Throwable $e) {
                         $error = 'Registrierung fehlgeschlagen (Email evtl. schon vergeben).';
                     }
@@ -69,6 +71,6 @@ class AuthController extends Controller {
 
     public function logout(): void {
         Auth::logout();
-        $this->redirect('/customer_app/public/login');
+        $this->redirect('/customers');
     }
 }

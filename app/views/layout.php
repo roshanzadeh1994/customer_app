@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <title>Kunden-App</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="/customer_app/public/assets/style.css" rel="stylesheet"> <!-- zentrales CSS -->
+  <link href="<?= BASE_PATH ?>/assets/style.css" rel="stylesheet"> <!-- zentrales CSS -->
 </head>
 <body>
   <header>
@@ -16,14 +16,14 @@
       </div>
       <nav>
         <?php if (Auth::check()): ?>
-          <a href="/customer_app/public/customers">Meine Kunden</a> <!-- Link zur Kundenliste -->
-          <form action="/customer_app/public/logout" method="post" style="display:inline">
+          <a href="<?= BASE_PATH ?>/customers">Meine Kunden</a> <!-- Link zur Kundenliste -->
+          <form action="<?= BASE_PATH ?>/logout" method="post" style="display:inline">
             <?= Csrf::input() ?> <!-- CSRF-Schutz beim Logout -->
             <button type="submit" class="linklike">Logout</button>
           </form>
         <?php else: ?>
-          <a href="/customer_app/public/login">Login</a> <!-- Login-Link -->
-          <a href="/customer_app/public/register">Register</a> <!-- Registrierung-Link -->
+          <a href="<?= BASE_PATH ?>/login">Login</a> <!-- Login-Link -->
+          <a href="<?= BASE_PATH ?>/register">Register</a> <!-- Registrierung-Link -->
         <?php endif; ?>
       </nav>
     </div>
@@ -34,6 +34,6 @@
     <?php endif; ?>
     <?php require $viewFile; ?>
   </main>
-  <script src="/customer_app/public/assets/app.js"></script>  <!-- JS für Suche/Sortierung -->
+  <script src="<?= BASE_PATH ?>/assets/app.js"></script>  <!-- JS für Suche/Sortierung -->
 </body>
 </html>

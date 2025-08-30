@@ -17,8 +17,10 @@ class Controller {
         include __DIR__ . '/../views/layout.php';
     }
     protected function redirect(string $path): void {
-
-        // HTTP-Redirect
-        header("Location: {$path}"); exit;
+    if (!preg_match('#^https?://#i', $path)) {
+        $path = rtrim(BASE_PATH, '/') . '/' . ltrim($path, '/');
     }
+    header("Location: {$path}");
+    exit;
+}
 }

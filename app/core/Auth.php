@@ -22,6 +22,7 @@ class Auth {
     public static function requireLogin(): void {
 
         // Weiterleitung wenn nicht eingeloggt
-        if (!self::check()) { header('Location: /customer_app/public/login'); exit; }
+        if (!self::check()) { header('Location: ' . (defined('BASE_PATH') ? BASE_PATH : '') . '/login');
+         exit; }
     }
 }
