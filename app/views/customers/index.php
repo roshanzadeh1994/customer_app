@@ -37,7 +37,7 @@
               <td><?= htmlspecialchars($c['address'] ?? '') ?></td>
               <td><?= htmlspecialchars($c['phone'] ?? '') ?></td>
               <td class="actions nowrap">
-                <a class="link" href="<?= BASE_PATH ?>customers/<?= (int)$c['id'] ?>/edit">Bearbeiten</a> <!-- Kunde bearbeiten -->
+                <a class="link" href="<?= BASE_PATH ?>/customers/<?= (int)$c['id'] ?>/edit">Bearbeiten</a> <!-- Kunde bearbeiten -->
                 <form action="<?= BASE_PATH ?>/customers/<?= (int)$c['id'] ?>/delete" method="post" onsubmit="return confirm('Sicher löschen?')" style="display:inline">
                   <?= Csrf::input() ?>
                   <button type="submit" class="linklike">Löschen</button> <!-- Kunde löschen -->
