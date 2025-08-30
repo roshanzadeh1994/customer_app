@@ -33,7 +33,8 @@ cd C:\xampp\htdocs
 git clone https://github.com/roshanzadeh1994/customer_app.git
  ```
 
-### 2. In **XAMPP** Apache und MySQL starten
+### 2. **XAMPP** Apache und MySQL starten
+Öffnen Sie das XAMPP Control Panel und klicken Sie auf Start bei Apache und MySQL
 
 ### 3. Composer-Abhängigkeiten installieren
 Nachdem Sie das Projekt geklont und im VS Code geöffnet haben, öffnen Sie im Projektverzeichnis (z.B. C:\xampp\htdocs\customer_app) ein Terminal und führen Sie folgenden Befehl aus
@@ -52,9 +53,8 @@ composer install
  ### 5.server starten
 - Im Browser öffnen:  
   ```bash
-   http://localhost/customer_app/public/login
-```
----
+   http://localhost/customer_app/public/login ```
+
 
 
 ## Features (Kurzfassung)
