@@ -34,6 +34,10 @@ class CustomerController extends Controller {
                 if (!Validation::required($number) || !Validation::required($name)
                     || !Validation::max($number, 50) || !Validation::max($name, 100)) {
                     $error = 'Bitte Pflichtfelder korrekt ausfüllen.';
+                }
+                elseif ($phone && !preg_match('/^\+?[0-9\s\-]{7,20}$/', $phone)) {
+                    $error = 'Bitte eine gültige Telefonnummer eingeben.';
+
                 } else {
 
                     // Neuen Kunden speichern
@@ -69,7 +73,12 @@ class CustomerController extends Controller {
                 if (!Validation::required($number) || !Validation::required($name)
                     || !Validation::max($number, 50) || !Validation::max($name, 100)) {
                     $error = 'Bitte Pflichtfelder korrekt ausfüllen.';
-                } else {
+                } 
+                elseif ($phone && !preg_match('/^\+?[0-9\s\-]{7,20}$/', $phone)) {
+                    $error = 'Bitte eine gültige Telefonnummer eingeben.';
+                    }
+                    
+                else {
 
                     // Kunden aktualisieren
                     Customer::update($id, Auth::id(), $number, $name, $address ?: null, $phone ?: null);
