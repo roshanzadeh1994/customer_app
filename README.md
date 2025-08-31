@@ -15,7 +15,7 @@ Ziel war die Erstellung einer Mini-Webapplikation (**PHP + MySQL**) mit folgende
 ## Technologien
 - **PHP 8** (getestet mit XAMPP)  
 - **MySQL** (phpMyAdmin)  
-- **Composer** (PSR-4 Autoload)  
+- **Composer** (für PHP-Abhängigkeiten)  
 - **HTML**, **CSS**, **JavaScript**  
 
 ---
@@ -34,7 +34,7 @@ git clone https://github.com/roshanzadeh1994/customer_app.git
  ```
 
 ### 2. **XAMPP** Apache und MySQL starten
-Öffnen Sie das XAMPP Control Panel und klicken Sie auf Start bei Apache und MySQL
+Öffnen Sie das XAMPP Control Panel und klicken Sie auf Start bei **Apache** und **MySQL**
 
 ### 3. Composer-Abhängigkeiten installieren
 Nachdem Sie das Projekt geklont und im VS Code geöffnet haben, öffnen Sie im Projektverzeichnis (z.B. C:\xampp\htdocs\customer_app) ein Terminal und führen Sie folgenden Befehl aus
