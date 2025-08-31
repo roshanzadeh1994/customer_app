@@ -1,4 +1,4 @@
-# Kunden-App (Testaufgabe Edd-ON IT & E-Commerce GmbH)
+## Kunden-App (Testaufgabe Edd-ON IT & E-Commerce GmbH)
 
 Dies ist eine kleine **Testaufgabe** für die Firma **Edd-ON IT & E-Commerce GmbH**.  
 Ziel war die Erstellung einer Mini-Webapplikation (**PHP + MySQL**) mit folgenden Funktionen:
